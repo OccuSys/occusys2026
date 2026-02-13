@@ -1,26 +1,15 @@
 :root{
   --max-width: 1040px;
-
-  /* Brand */
-  --bg: #0b1020;
-  --panel: rgba(255,255,255,0.06);
-  --panel-2: rgba(255,255,255,0.08);
-  --text: rgba(255,255,255,0.92);
-  --muted: rgba(255,255,255,0.72);
-  --border: rgba(255,255,255,0.14);
-
-  /* Accent (tech blue) */
-  --accent: #6aa6ff;
-  --accent-2: #7cf0ff;
-
-  /* Light surface */
-  --page: #ffffff;
-  --ink: #111;
-  --ink-muted: #555;
+  --header-height: 104px;
 
   --radius: 16px;
   --shadow: 0 10px 30px rgba(10, 20, 40, 0.12);
-  --header-height: 104px;
+
+  --ink: #0f172a;
+  --ink-muted: rgba(15, 23, 42, 0.65);
+
+  --accent: #6aa6ff;
+  --accent-2: #7cf0ff;
 }
 
 /* Reset */
@@ -30,7 +19,7 @@ body{
   margin:0;
   font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
   line-height:1.65;
-  background: var(--page);
+  background: #ffffff;
   color: var(--ink);
 }
 
@@ -41,7 +30,7 @@ body{
   padding: 0 22px;
 }
 
-/* Sticky header with subtle blur */
+/* Sticky header */
 .header{
   position: sticky;
   top: 0;
@@ -53,7 +42,6 @@ body{
   padding: 14px 0;
 }
 
-/* Brand line */
 .brand-title{
   font-weight: 800;
   font-size: 16px;
@@ -65,7 +53,6 @@ body{
   margin-top: 4px;
 }
 
-/* Navigation */
 .nav{
   display:flex;
   flex-wrap:wrap;
@@ -87,68 +74,89 @@ body{
   background: rgba(0,0,0,0.03);
 }
 
-/* Main */
 .main{
-  padding: 34px 22px 56px;
+  padding: 0 22px 56px;
 }
 
 /* Anchor offset for sticky header */
 [id]{ scroll-margin-top: calc(var(--header-height) + 18px); }
 
-/* --- HERO / top section styling --- */
-/* Your first h1 becomes a strong “research” headline */
-h1{
+/* Subtle ribbon background */
+.page-ribbon{
+  background:
+    radial-gradient(1200px 420px at 20% -10%, rgba(106,166,255,0.18), transparent 60%),
+    radial-gradient(900px 320px at 90% 0%, rgba(124,240,255,0.12), transparent 55%),
+    #ffffff;
+}
+
+/* --- HERO with animated wave --- */
+.hero{
+  position: relative;
+  margin-top: 20px;
+  border-radius: 22px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.92), rgba(255,255,255,0.92));
+}
+
+.hero-inner{
+  position: relative;
+  z-index: 2;
+  padding: 56px 22px 46px;
+}
+
+.hero::before{
+  /* Animated wave layer */
+  content:"";
+  position:absolute;
+  inset: 0;
+  z-index: 1;
+  opacity: 0.9;
+  background-repeat: repeat-x;
+  background-position: 0 110%;
+  background-size: 1200px 260px;
+
+  /* Inline SVG background (no extra files) */
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='260' viewBox='0 0 1200 260'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' x2='1'%3E%3Cstop offset='0' stop-color='%236aa6ff' stop-opacity='0.55'/%3E%3Cstop offset='0.5' stop-color='%237a4dff' stop-opacity='0.45'/%3E%3Cstop offset='1' stop-color='%237cf0ff' stop-opacity='0.45'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath d='M0 170 C 150 120 300 220 450 170 C 600 120 750 220 900 170 C 1050 120 1150 210 1200 170 L1200 260 L0 260 Z' fill='url(%23g)'/%3E%3Cpath d='M0 190 C 160 140 320 240 480 190 C 640 140 800 240 960 190 C 1120 140 1180 230 1200 200 L1200 260 L0 260 Z' fill='url(%23g)' fill-opacity='0.45'/%3E%3Cpath d='M0 210 C 170 160 340 260 510 210 C 680 160 850 260 1020 210 C 1120 180 1170 240 1200 230 L1200 260 L0 260 Z' fill='url(%23g)' fill-opacity='0.28'/%3E%3C/svg%3E");
+
+  animation: wave-drift 28s linear infinite;
+}
+
+@keyframes wave-drift{
+  from { background-position-x: 0; }
+  to   { background-position-x: -1200px; }
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce){
+  .hero::before{ animation: none; }
+}
+
+/* Typography */
+.content h1{
   font-size: clamp(34px, 4.4vw, 52px);
   line-height: 1.08;
   margin: 0 0 14px;
   letter-spacing: -0.8px;
 }
-h2{
+.content h2{
   font-size: clamp(22px, 2.4vw, 30px);
-  margin: 46px 0 14px;
+  margin: 0 0 10px;
   letter-spacing: -0.3px;
 }
-h3{
+.content h3{
+  margin: 0;
   font-size: 18px;
-  margin: 22px 0 8px;
+  color: var(--ink-muted);
+  font-weight: 600;
 }
 
-/* Make the first “subtitle” blocks look intentional */
-.content > h2:first-of-type{
-  margin-top: 8px;
-}
-
-/* Callout: turn it into a branded “research card” */
-.callout{
-  position: relative;
-  border-radius: var(--radius);
-  padding: 18px 18px;
-  margin: 22px 0 22px;
-  border: 1px solid rgba(20,40,80,0.10);
-  box-shadow: var(--shadow);
-  background:
-    linear-gradient(135deg, rgba(106,166,255,0.10), rgba(124,240,255,0.08)),
-    #ffffff;
-}
-.callout:before{
-  content:"";
-  position:absolute;
-  inset: -1px;
-  border-radius: var(--radius);
-  padding: 1px;
-  background: linear-gradient(135deg, rgba(106,166,255,0.55), rgba(124,240,255,0.35));
-  -webkit-mask:
-    linear-gradient(#fff 0 0) content-box,
-    linear-gradient(#fff 0 0);
-  -webkit-mask-composite: xor;
-  mask-composite: exclude;
-  pointer-events:none;
-}
-
-/* Typography polish */
 p{ margin: 0 0 14px; }
 ul{ margin: 10px 0 16px 22px; }
 li{ margin: 6px 0; }
+
 hr{
   border: 0;
   height: 1px;
@@ -156,21 +164,19 @@ hr{
   margin: 26px 0;
 }
 
-/* Nice “section blocks” if you add <div class="section-card"> ... */
-.section-card{
-  border: 1px solid rgba(0,0,0,0.08);
+/* Callout */
+.callout{
+  position: relative;
   border-radius: var(--radius);
   padding: 18px 18px;
-  background: #fff;
+  margin: 22px 0 22px;
+  border: 1px solid rgba(20,40,80,0.10);
   box-shadow: 0 10px 24px rgba(0,0,0,0.06);
-  margin: 16px 0 22px;
+  background:
+    linear-gradient(135deg, rgba(106,166,255,0.10), rgba(124,240,255,0.08)),
+    #ffffff;
 }
 
-/* Links */
-a{ color: #1a58d6; }
-a:hover{ opacity: 0.85; }
-
-/* Footer */
 .footer{
   border-top: 1px solid rgba(0,0,0,0.08);
   padding: 22px 0;
@@ -179,15 +185,8 @@ a:hover{ opacity: 0.85; }
   font-size: 14px;
 }
 
-/* --- Optional: subtle top “research ribbon” background --- */
-.page-ribbon{
-  background: radial-gradient(1200px 420px at 20% -10%, rgba(106,166,255,0.22), transparent 60%),
-              radial-gradient(900px 320px at 90% 0%, rgba(124,240,255,0.16), transparent 55%);
-}
-
-/* Responsive */
 @media (max-width: 720px){
-  .nav{ gap: 8px; }
+  .main{ padding: 0 18px 46px; }
+  .hero-inner{ padding: 42px 16px 36px; }
   .nav a{ padding: 7px 9px; font-size: 13px; }
-  .main{ padding: 26px 18px 46px; }
 }
