@@ -9,17 +9,18 @@ permalink: pretty
 
 nav:
   - title: Home
-    url: "#home"
+    url: "/buildsys2026/#home"
   - title: About
-    url: "#about"
+    url: "/buildsys2026/#about"
   - title: Topics
-    url: "#topics"
+    url: "/buildsys2026/#topics"
   - title: Dates
-    url: "#dates"
+    url: "/buildsys2026/#dates"
   - title: Submission
-    url: "#submission"
+    url: "/buildsys2026/#submission"
   - title: Committee
-    url: "#committee"
+    url: "/buildsys2026/#committee"
   - title: Contact
-    url: "#contact"
+    url: "/buildsys2026/#contact"
+
 
