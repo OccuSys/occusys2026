@@ -9,16 +9,17 @@ permalink: pretty
 
 nav:
   - title: Home
-    url: /
-  - title: Call for Papers
-    url: /call/
-  - title: Important Dates
-    url: /dates/
+    url: "#home"
+  - title: About
+    url: "#about"
+  - title: Topics
+    url: "#topics"
+  - title: Dates
+    url: "#dates"
   - title: Submission
-    url: /submission/
+    url: "#submission"
   - title: Committee
-    url: /committee/
-  - title: Program
-    url: /program/
+    url: "#committee"
   - title: Contact
-    url: /contact/
+    url: "#contact"
+
