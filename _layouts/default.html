@@ -1,14 +1,15 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{{ page.title }} · {{ site.title }}</title>
-  <meta name="description" content="{{ site.description }}" />
-  <link rel="stylesheet" href="{{ site.baseurl }}/assets/style.css" />
+  <meta name="description" content="{{ site.description }}">
+  <link rel="stylesheet" href="{{ site.baseurl }}/assets/style.css">
 </head>
 
 <body>
+
   <header class="header">
     <div class="container">
       <div class="brand">
@@ -19,25 +20,20 @@
       <nav class="nav">
         {% for item in site.nav %}
           <a href="{{ item.url }}">{{ item.title }}</a>
-             class="{% if page.url == item.url %}active{% endif %}">
-             {{ item.title }}
-          </a>
         {% endfor %}
       </nav>
     </div>
   </header>
 
   <main class="container main">
-    <article class="content">
-      {{ content }}
-    </article>
+    {{ content }}
   </main>
 
   <footer class="footer">
     <div class="container">
-      <div>© {{ "now" | date: "%Y" }} OccuSys Workshop · ACM BuildSys 2026</div>
-      <div class="footer-note">Hosted on GitHub Pages</div>
+      © {{ "now" | date: "%Y" }} OccuSys Workshop · ACM BuildSys 2026
     </div>
   </footer>
+
 </body>
 </html>
