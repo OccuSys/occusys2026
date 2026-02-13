@@ -82,65 +82,70 @@ body{
    ========================= */
 .hero{
   position: relative;
-  height: 200px;
+  height: 220px;
   margin: 20px 0 30px;
   border-radius: 22px;
   overflow: hidden;
   border: 1px solid rgba(0,0,0,0.08);
   background: #ffffff;
   box-shadow: 0 10px 30px rgba(10, 20, 40, 0.08);
-
-  /* soft fade at the sides like the reference */
-  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 12%, black 88%, transparent 100%);
-  mask-image: linear-gradient(to right, transparent 0%, black 12%, black 88%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
+  mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
 }
 
-/* Layer 1: dense woven lines */
+/* FRONT layer: no tiling, no seams */
 .hero::before{
   content:"";
   position:absolute;
-  inset:0;
+  left: -50%;
+  top: 0;
+  width: 200%;
+  height: 100%;
+  opacity: 0.92;
 
-  background-repeat: repeat-x;
-  background-size: 1600px 280px;
-  background-position: 0 110%;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center;
 
-  /* Dense multi-line wave bundle with rainbow gradient */
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1600' height='280' viewBox='0 0 1600 280'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' x2='1'%3E%3Cstop offset='0' stop-color='%23ffb000'/%3E%3Cstop offset='0.18' stop-color='%23ff4d8d'/%3E%3Cstop offset='0.45' stop-color='%237a4dff'/%3E%3Cstop offset='0.70' stop-color='%2300b7c7'/%3E%3Cstop offset='1' stop-color='%2390e8b0'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cg fill='none' stroke='url(%23g)' stroke-width='2' stroke-linecap='round' opacity='0.60'%3E%3Cpath d='M-90 190 C 120 90 320 270 520 190 C 720 110 900 250 1100 190 C 1300 120 1450 240 1690 190'/%3E%3Cpath d='M-90 184 C 120 96 320 264 520 184 C 720 116 900 244 1100 184 C 1300 126 1450 234 1690 184'/%3E%3Cpath d='M-90 178 C 120 102 320 258 520 178 C 720 122 900 238 1100 178 C 1300 132 1450 228 1690 178'/%3E%3Cpath d='M-90 172 C 120 108 320 252 520 172 C 720 128 900 232 1100 172 C 1300 138 1450 222 1690 172'/%3E%3Cpath d='M-90 166 C 120 114 320 246 520 166 C 720 134 900 226 1100 166 C 1300 144 1450 216 1690 166'/%3E%3Cpath d='M-90 160 C 120 120 320 240 520 160 C 720 140 900 220 1100 160 C 1300 150 1450 210 1690 160'/%3E%3Cpath d='M-90 154 C 120 126 320 234 520 154 C 720 146 900 214 1100 154 C 1300 156 1450 204 1690 154'/%3E%3Cpath d='M-90 148 C 120 132 320 228 520 148 C 720 152 900 208 1100 148 C 1300 162 1450 198 1690 148'/%3E%3Cpath d='M-90 142 C 120 138 320 222 520 142 C 720 158 900 202 1100 142 C 1300 168 1450 192 1690 142'/%3E%3Cpath d='M-90 136 C 120 144 320 216 520 136 C 720 164 900 196 1100 136 C 1300 174 1450 186 1690 136'/%3E%3Cpath d='M-90 130 C 120 150 320 210 520 130 C 720 170 900 190 1100 130 C 1300 180 1450 180 1690 130'/%3E%3Cpath d='M-90 124 C 120 156 320 204 520 124 C 720 176 900 184 1100 124 C 1300 186 1450 174 1690 124'/%3E%3Cpath d='M-90 118 C 120 162 320 198 520 118 C 720 182 900 178 1100 118 C 1300 192 1450 168 1690 118'/%3E%3Cpath d='M-90 112 C 120 168 320 192 520 112 C 720 188 900 172 1100 112 C 1300 198 1450 162 1690 112'/%3E%3Cpath d='M-90 106 C 120 174 320 186 520 106 C 720 194 900 166 1100 106 C 1300 204 1450 156 1690 106'/%3E%3Cpath d='M-90 100 C 120 180 320 180 520 100 C 720 200 900 160 1100 100 C 1300 210 1450 150 1690 100'/%3E%3Cpath d='M-90 94 C 120 186 320 174 520 94 C 720 206 900 154 1100 94 C 1300 216 1450 144 1690 94'/%3E%3Cpath d='M-90 88 C 120 192 320 168 520 88 C 720 212 900 148 1100 88 C 1300 222 1450 138 1690 88'/%3E%3Cpath d='M-90 82 C 120 198 320 162 520 82 C 720 218 900 142 1100 82 C 1300 228 1450 132 1690 82'/%3E%3Cpath d='M-90 76 C 120 204 320 156 520 76 C 720 224 900 136 1100 76 C 1300 234 1450 126 1690 76'/%3E%3Cpath d='M-90 70 C 120 210 320 150 520 70 C 720 230 900 130 1100 70 C 1300 240 1450 120 1690 70'/%3E%3C/g%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='2000' height='260' viewBox='0 0 2000 260'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' x2='1'%3E%3Cstop offset='0' stop-color='%23ffb000'/%3E%3Cstop offset='0.20' stop-color='%23ff4d8d'/%3E%3Cstop offset='0.48' stop-color='%237a4dff'/%3E%3Cstop offset='0.72' stop-color='%2300b7c7'/%3E%3Cstop offset='1' stop-color='%2390e8b0'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cg fill='none' stroke='url(%23g)' stroke-linecap='round'%3E%3C!-- outer strands --%3E%3Cg opacity='0.35' stroke-width='1.6'%3E%3Cpath d='M-120 176 C 160 60 420 270 680 176 C 940 60 1200 270 1460 176 C 1720 60 1880 250 2120 176'/%3E%3Cpath d='M-120 96 C 160 220 420 10 680 96 C 940 220 1200 10 1460 96 C 1720 220 1880 30 2120 96'/%3E%3C/g%3E%3C!-- mid strands --%3E%3Cg opacity='0.60' stroke-width='2.0'%3E%3Cpath d='M-120 166 C 160 76 420 256 680 166 C 940 76 1200 256 1460 166 C 1720 76 1880 236 2120 166'/%3E%3Cpath d='M-120 156 C 160 92 420 240 680 156 C 940 92 1200 240 1460 156 C 1720 92 1880 220 2120 156'/%3E%3Cpath d='M-120 146 C 160 108 420 224 680 146 C 940 108 1200 224 1460 146 C 1720 108 1880 204 2120 146'/%3E%3Cpath d='M-120 136 C 160 124 420 208 680 136 C 940 124 1200 208 1460 136 C 1720 124 1880 188 2120 136'/%3E%3Cpath d='M-120 126 C 160 140 420 192 680 126 C 940 140 1200 192 1460 126 C 1720 140 1880 172 2120 126'/%3E%3C/g%3E%3C!-- core strands (thicker) --%3E%3Cg opacity='0.85' stroke-width='2.6'%3E%3Cpath d='M-120 156 C 160 70 420 246 680 156 C 940 70 1200 246 1460 156 C 1720 70 1880 230 2120 156'/%3E%3Cpath d='M-120 146 C 160 86 420 230 680 146 C 940 86 1200 230 1460 146 C 1720 86 1880 214 2120 146'/%3E%3Cpath d='M-120 136 C 160 102 420 214 680 136 C 940 102 1200 214 1460 136 C 1720 102 1880 198 2120 136'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
 
-  animation: ribbon-drift 22s linear infinite;
+  animation: drift-front 22s linear infinite;
 }
 
-/* Layer 2: subtle parallax (slower, lighter) */
+/* BACK layer: inverse phase for weaving + slower */
 .hero > .ribbon-back{
   position:absolute;
-  inset:-6px 0 0 0;
-  opacity: 0.30;
-  background-repeat: repeat-x;
-  background-size: 1600px 280px;
-  background-position: 0 110%;
+  left: -50%;
+  top: 0;
+  width: 200%;
+  height: 100%;
+  opacity: 0.55;
   pointer-events:none;
 
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1600' height='280' viewBox='0 0 1600 280'%3E%3Cdefs%3E%3ClinearGradient id='g2' x1='0' x2='1'%3E%3Cstop offset='0' stop-color='%23ffb000'/%3E%3Cstop offset='0.18' stop-color='%23ff4d8d'/%3E%3Cstop offset='0.45' stop-color='%237a4dff'/%3E%3Cstop offset='0.70' stop-color='%2300b7c7'/%3E%3Cstop offset='1' stop-color='%2390e8b0'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cg fill='none' stroke='url(%23g2)' stroke-width='1.6' stroke-linecap='round'%3E%3Cpath d='M-90 168 C 120 100 320 240 520 168 C 720 128 900 220 1100 168 C 1300 138 1450 210 1690 168'/%3E%3Cpath d='M-90 152 C 120 116 320 224 520 152 C 720 144 900 204 1100 152 C 1300 154 1450 194 1690 152'/%3E%3Cpath d='M-90 136 C 120 132 320 208 520 136 C 720 160 900 188 1100 136 C 1300 170 1450 178 1690 136'/%3E%3Cpath d='M-90 120 C 120 148 320 192 520 120 C 720 176 900 172 1100 120 C 1300 186 1450 162 1690 120'/%3E%3Cpath d='M-90 104 C 120 164 320 176 520 104 C 720 192 900 156 1100 104 C 1300 202 1450 146 1690 104'/%3E%3C/g%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center;
 
-  animation: ribbon-drift-back 38s linear infinite;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='2000' height='260' viewBox='0 0 2000 260'%3E%3Cdefs%3E%3ClinearGradient id='g2' x1='0' x2='1'%3E%3Cstop offset='0' stop-color='%23ffb000'/%3E%3Cstop offset='0.20' stop-color='%23ff4d8d'/%3E%3Cstop offset='0.48' stop-color='%237a4dff'/%3E%3Cstop offset='0.72' stop-color='%2300b7c7'/%3E%3Cstop offset='1' stop-color='%2390e8b0'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cg fill='none' stroke='url(%23g2)' stroke-linecap='round'%3E%3Cg opacity='0.70' stroke-width='2.0'%3E%3Cpath d='M-120 160 C 160 250 420 40 680 160 C 940 250 1200 40 1460 160 C 1720 250 1880 60 2120 160'/%3E%3Cpath d='M-120 150 C 160 234 420 56 680 150 C 940 234 1200 56 1460 150 C 1720 234 1880 76 2120 150'/%3E%3Cpath d='M-120 140 C 160 218 420 72 680 140 C 940 218 1200 72 1460 140 C 1720 218 1880 92 2120 140'/%3E%3Cpath d='M-120 130 C 160 202 420 88 680 130 C 940 202 1200 88 1460 130 C 1720 202 1880 108 2120 130'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+
+  animation: drift-back 34s linear infinite;
 }
 
-@keyframes ribbon-drift{
-  from { background-position-x: 0; }
-  to   { background-position-x: -1600px; }
+@keyframes drift-front{
+  from { transform: translateX(0); }
+  to   { transform: translateX(-25%); }
 }
 
-@keyframes ribbon-drift-back{
-  from { background-position-x: 0; }
-  to   { background-position-x: -1600px; }
+@keyframes drift-back{
+  from { transform: translateX(0); }
+  to   { transform: translateX(-18%); }
 }
 
-/* Respect reduced motion */
 @media (prefers-reduced-motion: reduce){
   .hero::before{ animation:none; }
   .hero > .ribbon-back{ animation:none; }
 }
+
 
 /* Typography */
 h1{
