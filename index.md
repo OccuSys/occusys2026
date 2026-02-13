@@ -4,11 +4,18 @@ title: Home
 permalink: /
 ---
 
+<div class="hero">
+<div class="hero-inner">
+
 <a id="home"></a>
 
 # Occupant-Centric Energy Systems (OccuSys)
 ## Modeling and Control Beyond Static Boundaries  
 ### ACM BuildSys 2026 · Banff, Canada
+
+</div>
+</div>
+
 
 <div class="callout">
 The energy transition presents unprecedented opportunities to rethink how we model, predict, and respond to occupant behavior. From personalized thermal comfort control and human-in-the-loop systems to data-driven behavior prediction and adaptive building automation, emerging technologies enable buildings to become truly occupant-centric.
