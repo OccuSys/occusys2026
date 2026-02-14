@@ -346,7 +346,7 @@ li{ margin: 6px 0; color: var(--text); }
 
   /* ✅ IMPORTANT: update BOTH header height AND anchor offset */
   :root{
-    --header-height: 190px; /* increase if your nav wraps to 2 lines */
+    --header-height: 220px; /* increase if your nav wraps to 2 lines */
     --anchor-offset: calc(var(--header-height) + 16px);
   }
 
