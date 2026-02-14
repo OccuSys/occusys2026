@@ -101,7 +101,7 @@ body{
 .nav a{
   text-decoration:none;
   color: var(--header-text);
-  font-weight: 600;
+  font-weight: 700;
   font-size: 18px;
   letter-spacing: 0.2px;
 
@@ -355,3 +355,55 @@ li{ margin: 6px 0; color: var(--text); }
   .hero-block{ padding: 22px 18px 175px; }
   .hero-ribbon{ height: 125px; left: 14px; right: 14px; bottom: 14px; }
 }
+
+/* ---------- Pro polish: typography + layout rhythm ---------- */
+
+/* Slightly larger, more readable body */
+body{
+  font-size: 17px;
+}
+
+/* Constrain paragraphs for readability */
+.main{
+  padding-top: 34px;
+  padding-bottom: 72px;
+}
+
+/* Better section spacing */
+hr{
+  border: 0;
+  border-top: 1px solid rgba(15,23,42,0.10);
+  margin: 34px 0;
+}
+
+/* Headings hierarchy */
+h2{
+  margin-top: 56px;
+  margin-bottom: 14px;
+  font-size: 28px;
+  letter-spacing: -0.4px;
+  line-height: 1.15;
+}
+
+h3{
+  margin-top: 26px;
+  margin-bottom: 10px;
+  font-size: 20px;
+  letter-spacing: -0.2px;
+}
+
+/* Paragraph spacing */
+p{
+  margin: 0 0 14px;
+}
+
+/* Lists look “conference clean” */
+ul{
+  margin: 12px 0 0 20px;
+  padding: 0;
+}
+li{
+  margin: 8px 0;
+  line-height: 1.55;
+}
+
