@@ -1,21 +1,21 @@
 title: OccuSys Workshop @ ACM BuildSys 2026
 description: Occupant-Centric Energy Systems (OccuSys) – Modeling and Control Beyond Static Boundaries
 
-baseurl: "/occusys2026"
 url: "https://occusys.github.io"
+baseurl: ""   # ← MUST be empty
 
 nav:
   - title: Home
-    url: "/occusys2026/#home"
+    url: "#home"
   - title: About
-    url: "/occusys2026/#about"
+    url: "#about"
   - title: Topics
-    url: "/occusys2026/#topics"
+    url: "#topics"
   - title: Dates
-    url: "/occusys2026/#dates"
+    url: "#dates"
   - title: Submission
-    url: "/occusys2026/#submission"
+    url: "#submission"
   - title: Committee
-    url: "/occusys2026/#committee"
+    url: "#organization"
   - title: Contact
-    url: "/occusys2026/#contact"
+    url: "#contact"
