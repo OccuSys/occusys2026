@@ -115,7 +115,7 @@ ACM BuildSys 2026 website
 
 ---
 
-<a id="committee"></a>
+<a id="organization"></a>
 
 ## Organizing Committee
 
