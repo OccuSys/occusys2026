@@ -137,7 +137,7 @@ body{
   box-shadow: 0 18px 60px rgba(15,23,42,0.14);
 
   /* room for ribbon background */
-  padding: 26px 26px 200px;
+  padding: 26px 26px 120px;
 }
 
 /* content always above ribbon */
@@ -166,7 +166,7 @@ body{
 }
 
 .badge-dot{
-  width: 16px; height: 16px; border-radius: 99px;
+  width: 12px; height: 12px; border-radius: 99px;
   background: linear-gradient(90deg, var(--accentA), var(--accentB), var(--accentC));
   box-shadow: 0 0 16px rgba(0,183,199,0.30);
 }
