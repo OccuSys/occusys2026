@@ -4,43 +4,37 @@ title: Home
 permalink: /
 ---
 
-<section id="home">
+<div id="home"></div>
 
 <div class="hero-block">
 
-<div class="hero-top">
+  <div class="hero-top">
+    <div class="badge">
+      <span class="badge-dot"></span>
+      Occupant-Centric Energy Systems (OccuSys)
+    </div>
 
-<div class="badge">
-  <span class="badge-dot"></span>
-  Occupant-Centric Energy Systems (OccuSys)
-</div>
+    <p class="hero-sub">
+      Modeling and Control Beyond Static Boundaries — occupant-aware comfort, behavior, and grid flexibility for the next generation of building energy systems.
+    </p>
 
-<p class="hero-sub">
-Modeling and Control Beyond Static Boundaries — occupant-aware comfort, behavior, and grid flexibility for the next generation of building energy systems.
-</p>
+    <div class="hero-meta">
+      <span class="pill"><strong>Submission</strong> April 10, 2026 (AoE)</span>
+      <span class="pill"><strong>Notification</strong> April 20, 2026</span>
+      <span class="pill"><strong>Camera-ready</strong> May 5, 2026</span>
+      <a class="btn primary small" href="#submission">Submit</a>
+    </div>
+  </div>
 
-<div class="hero-meta">
-  <span class="pill"><strong>Submission</strong> April 10, 2026 (AoE)</span>
-  <span class="pill"><strong>Notification</strong> April 20, 2026</span>
-  <span class="pill"><strong>Camera-ready</strong> May 5, 2026</span>
-  <a class="btn primary small" href="#submission">Submit</a>
-</div>
-
-</div>
-
-<div class="hero-ribbon">
-  <div class="ribbon-back"></div>
-</div>
+  <div class="hero-ribbon">
+    <div class="ribbon-back"></div>
+  </div>
 
 </div>
-
-</section>
 
 ---
 
-<section id="about">
-
-## About the Workshop
+## About the Workshop {#about}
 
 The energy transition creates a critical opportunity to rethink how buildings model, predict, and respond to occupant behavior. From personalized thermal comfort control and human-in-the-loop systems to data-driven behavior modeling and adaptive automation, emerging technologies enable buildings to become truly occupant-centric energy systems.
 
@@ -60,94 +54,62 @@ The workshop aims to:
 2. Identify research gaps and future directions in adaptive comfort and human-aware energy systems  
 3. Foster interdisciplinary collaboration between academia and industry  
 
-</section>
-
 ---
 
-<section id="topics">
-
-## Topics of Interest
+## Topics of Interest {#topics}
 
 We invite original research, position papers, and work-in-progress submissions on all aspects of occupant behavior modeling and control for energy management. Topics include, but are not limited to:
 
 - **Modeling Approaches:** Data-driven vs. physics-based vs. hybrid models; Personal comfort models and preference learning; Occupancy detection and prediction methods; etc.
-
 - **Control and Optimization:** Occupant-centric controls; Adaptive and personalized comfort control; Model predictive control with behavior forecasting; Privacy-preserving controls; etc.
-
 - **Beyond Static Comfort Boundaries:** Adaptive thermal comfort models in practice; Context-dependent comfort; Thermal comfort equity and individual differences; etc.
-
 - **Data and Benchmarking:** Longitudinal studies and real-world deployment; Wearable sensors and physiological monitoring; Privacy, ethics, and user acceptance; etc.
-
 - **Integration with Energy Systems:** Demand response enabled by occupant behavior prediction; Thermal energy storage and occupant flexibility; Building-to-grid services considering occupant comfort; etc.
-
 - **Theory and Methods:** Interpretability and explainability in ML-based models; Validation and verification methodologies; Interdisciplinary approaches; etc.
-
-</section>
 
 ---
 
-<section id="submission">
-
-## Submission
+## Submission {#submission}
 
 Submissions must be unpublished and not under review for any other venue. Papers must be **at most 6 pages (single-spaced, US Letter 8.5” × 11”)**, including figures, tables, references, and appendices.
 
 The format must follow the official  
-<a href="https://www.acm.org/publications/proceedings-template" target="_blank" rel="noopener">
-ACM proceedings template (sigconf format)
-</a>  
+<a href="https://www.acm.org/publications/proceedings-template" target="_blank" rel="noopener">ACM proceedings template (sigconf format)</a>  
 (LaTeX preferred or Word) and comply with ACM formatting requirements (9-pt font). Authors must anonymize their manuscripts by enabling the `anonymous` option and using the `anonsuppress` section where appropriate.
 
 Papers that do not comply with size, formatting, or anonymization requirements will not be reviewed.
 
 All papers must be submitted via  
-<a href="https://occusys.hotcrp.com/" target="_blank" rel="noopener">
-HotCRP
-</a>.
+<a href="https://occusys.hotcrp.com/" target="_blank" rel="noopener">HotCRP</a>.
 
 Registration is handled through the official  
-<a href="https://buildsys.acm.org/2026/" target="_blank" rel="noopener">
-ACM BuildSys 2026 website
-</a>.
-
-</section>
+<a href="https://buildsys.acm.org/2026/" target="_blank" rel="noopener">ACM BuildSys 2026 website</a>.
 
 ---
 
-<section id="dates">
-
-## Important Dates (AoE)
+## Important Dates (AoE) {#dates}
 
 - **Submission:** April 10, 2026  
 - **Reviewer Deadline:** April 17, 2026  
 - **Notification:** April 20, 2026  
 - **Camera-ready:** May 5, 2026  
 
-</section>
-
 ---
 
-<section id="organization">
-
-## Organizing Committee
+## Organizing Committee {#organization}
 
 - Prof. Zoltan Nagy (TU/e)  
 - Prof. Michael Kane (Northeastern University)  
 - Dr. Maharshi Pathak (Northeastern University)  
 - Dr. Martin Mosteiro Romero (TU Delft)  
-- Dr. Wei Luo (TU/e)    
+- Dr. Wei Luo (TU/e)  
+- Mahnaz Vahdat (Northeastern University)  
 - Ava Mohammadi (TU/e)  
-
-</section>
 
 ---
 
-<section id="contact">
-
-## Contact
+## Contact {#contact}
 
 For questions, please contact:
 
 **z.nagy@tue.nl**
-
-</section>
