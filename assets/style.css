@@ -166,7 +166,7 @@ body{
 }
 
 .badge-dot{
-  width: 8px; height: 8px; border-radius: 99px;
+  width: 16px; height: 16px; border-radius: 99px;
   background: linear-gradient(90deg, var(--accentA), var(--accentB), var(--accentC));
   box-shadow: 0 0 16px rgba(0,183,199,0.30);
 }
