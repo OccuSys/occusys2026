@@ -15,7 +15,7 @@ permalink: /
     </div>
 
     <p class="hero-sub">
-      Modeling and Control Beyond Static Boundaries — occupant-aware comfort, behavior, and grid flexibility for the next generation of building energy systems.
+      Modeling and Control Beyond Static Boundaries — Integrating human-building interaction, dynamic comfort, and grid-responsive control.
     </p>
 
     <div class="hero-meta">
