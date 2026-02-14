@@ -257,7 +257,7 @@ h1{
   right: 18px;
   bottom: 18px;
 
-  height: 145px;              /* ✅ tighter than before */
+  height: 120px;              /* ✅ tighter than before */
   border-radius: 18px;
   overflow:hidden;
 
