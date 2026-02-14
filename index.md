@@ -15,7 +15,7 @@ permalink: /
     </div>
 
     <p class="hero-sub">
-      Modeling and Control Beyond Static Boundaries — Integrating human-building interaction, dynamic comfort, and grid-responsive control.
+      Modeling and Control Beyond Static Boundaries: Integrating human-building interaction, dynamic comfort, and grid-responsive control.
     </p>
 
     <div class="hero-meta">
