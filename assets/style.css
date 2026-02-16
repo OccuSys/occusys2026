@@ -256,12 +256,12 @@ h1{
    HERO RIBBON (Clean ACM Style)
    =============================== */
 
+/* Ribbon container */
 .hero-ribbon{
   position: absolute;
   left: 18px;
   right: 18px;
   bottom: 18px;
-
   height: 120px;
   border-radius: 18px;
   overflow: hidden;
@@ -271,24 +271,32 @@ h1{
 
   pointer-events: none;
   z-index: 1;
+
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 7%, black 93%, transparent 100%);
+  mask-image: linear-gradient(to right, transparent 0%, black 7%, black 93%, transparent 100%);
 }
 
+/* Both layers fill the container */
+.hero-ribbon .ribbon-back,
 .hero-ribbon .ribbon-front{
-  background-image: url("/assets/ribbon.svg");
+  position: absolute;
+  inset: 0;
   background-repeat: repeat-x;
   background-position: 0 50%;
-  background-size: 700px auto;   /* denser */
+  background-size: 700px auto;     /* smaller = denser */
+  animation: none !important;      /* ✅ static */
+}
+
+/* ✅ IMPORTANT: correct URL for your GitHub Pages baseurl */
+.hero-ribbon .ribbon-front{
+  background-image: url("/occusys.github.io/assets/ribbon.svg");
   opacity: 0.85;
-  animation: none !important;    /* static */
 }
 
 .hero-ribbon .ribbon-back{
-  background-image: url("/assets/ribbon.svg");
-  background-repeat: repeat-x;
-  background-position: 220px 50%; /* slight offset */
-  background-size: 700px auto;
+  background-image: url("/occusys.github.io/assets/ribbon.svg");
+  background-position: 240px 50%;  /* slight offset so it feels richer */
   opacity: 0.35;
-  animation: none !important;     /* static */
 }
 
 
