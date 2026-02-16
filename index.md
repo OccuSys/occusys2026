@@ -27,6 +27,7 @@ permalink: /
 </div>
   
   <div class="hero-ribbon"></div>
+</div>
 
 ---
 
