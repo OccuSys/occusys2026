@@ -25,8 +25,9 @@ permalink: /
     <a class="btn primary small" href="#submission">Submit</a>
   </div>
 </div>
-  
+  <!--
   <div class="hero-ribbon"></div>
+-->
 </div>
 
 ---
