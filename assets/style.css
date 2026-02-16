@@ -292,9 +292,18 @@ h1{
   background-image: url("/assets/ribbon.svg");
   background-repeat: no-repeat;
   background-position: center; 
-  background-size: 1400px auto;
+  /* ✅ key: scale by viewport width so it won’t look thin on desktop or too zoomed on mobile */
+  background-size: clamp(1400px, 120vw, 2400px) auto;
 
   opacity: 0.95;
+}
+
+/* Mobile tuning: show “more” of the ribbon horizontally */
+@media (max-width: 720px){
+  .hero-ribbon{
+    background-size: clamp(1200px, 200vw, 2200px) auto;
+    opacity: 0.75;
+  }
 }
 
 /* Base content styling */
