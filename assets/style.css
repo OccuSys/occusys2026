@@ -292,9 +292,16 @@ h1{
   background-image: url("/assets/ribbon.svg");
   background-repeat: no-repeat;
   background-position: 50% 55%; 
-  background-size: 120% 160%;
+  background-size: 1400px auto;
 
   opacity: 0.95;
+}
+
+@media (max-width: 768px){
+  .hero-ribbon{
+    background-size: 900px auto;
+    opacity: 0.65;
+  }
 }
 
 
