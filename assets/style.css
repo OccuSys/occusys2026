@@ -120,7 +120,9 @@ body{
 
 /* Main */
 .main{
-  padding: 34px 0 72px;
+  padding: 34px 22px 72px;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 /* ✅ FIX: Anchor offset for sticky header (desktop + mobile) */
