@@ -24,8 +24,7 @@ permalink: /
     <span class="pill"><strong>Camera-ready</strong> May 5, 2026</span>
     <a class="btn primary small" href="#submission">Submit</a>
   </div>
-</div>
-
+  
   <div class="hero-ribbon">
     <div class="ribbon-back"></div>
     <div class="ribbon-front"></div>
