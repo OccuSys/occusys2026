@@ -252,17 +252,15 @@ h1{
   font-size: 14px;
 }
 
-/* ===============================
-   HERO RIBBON (Clean ACM Style)
-   =============================== */
+/* === STATIC PROFESSIONAL RIBBON === */
 
-/* Ribbon container */
 .hero-ribbon{
   position: absolute;
   left: 18px;
   right: 18px;
   bottom: 18px;
   height: 120px;
+
   border-radius: 18px;
   overflow: hidden;
 
@@ -272,47 +270,32 @@ h1{
   pointer-events: none;
   z-index: 1;
 
-  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 7%, black 93%, transparent 100%);
-  mask-image: linear-gradient(to right, transparent 0%, black 7%, black 93%, transparent 100%);
+  /* softer edge fade */
+  -webkit-mask-image: linear-gradient(to right,
+    transparent 0%,
+    rgba(0,0,0,1) 4%,
+    rgba(0,0,0,1) 96%,
+    transparent 100%);
+  mask-image: linear-gradient(to right,
+    transparent 0%,
+    rgba(0,0,0,1) 4%,
+    rgba(0,0,0,1) 96%,
+    transparent 100%);
 }
 
-/* Both layers fill the container */
-.hero-ribbon .ribbon-back,
-.hero-ribbon .ribbon-front{
-  position: absolute;
-  inset: 0;
-  background-repeat: repeat-x;
-  background-position: 0 50%;
-  background-size: 700px auto;     /* smaller = denser */
-  animation: none !important;      /* ✅ static */
-}
+.hero-ribbon::before{
+  content:"";
+  position:absolute;
+  inset: 6px;  /* prevents border-radius clipping */
 
-/* ✅ IMPORTANT: correct URL for your GitHub Pages baseurl */
-.hero-ribbon .ribbon-front{
   background-image: url("/assets/ribbon.svg");
-  opacity: 0.85;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+
+  opacity: 0.95;
 }
 
-.hero-ribbon .ribbon-back{
-  background-image: url("/assets/ribbon.svg");
-  background-position: 240px 50%;  /* slight offset so it feels richer */
-  opacity: 0.35;
-}
-
-
-/* --- Smooth Infinite Scroll --- */
-@keyframes ribbon-scroll{
-  from { background-position: 0 50%; }
-  to   { background-position: -1600px 50%; }
-}
-
-/* Respect reduced motion */
-@media (prefers-reduced-motion: reduce){
-  .hero-ribbon .ribbon-front,
-  .hero-ribbon .ribbon-back{
-    animation: none;
-  }
-}
 
 
 
