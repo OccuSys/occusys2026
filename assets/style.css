@@ -6,7 +6,7 @@
   --anchor-gap: 18px;
 
   /* anchor offset MUST follow header height */
-  --anchor-offset: calc(var(--header-height) + 14px);
+  --anchor-offset: calc(var(--header-height) + 18px);
 
   /* LIGHT THEME TOKENS */
   --bg0: #ffffff;
