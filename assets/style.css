@@ -262,84 +262,59 @@ h1{
   left: 18px;
   right: 18px;
   bottom: 18px;
-
   height: 120px;
+
   border-radius: 18px;
   overflow: hidden;
-
-  border: 1px solid rgba(15,23,42,0.08);
-  background: rgba(255,255,255,0.55);
-
   pointer-events: none;
   z-index: 1;
 
-  /* fade edges */
-  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 7%, black 93%, transparent 100%);
-  mask-image: linear-gradient(to right, transparent 0%, black 7%, black 93%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 6%, black 94%, transparent 100%);
+  mask-image: linear-gradient(to right, transparent 0%, black 6%, black 94%, transparent 100%);
 }
 
-/* layers fill the container */
-.ribbon-front,
+/* BACK LAYER */
 .ribbon-back{
   position: absolute;
   inset: 0;
-}
-
-/* IMPORTANT: each layer uses 2 moving strips (before + after) */
-.ribbon-front::before,
-.ribbon-front::after,
-.ribbon-back::before,
-.ribbon-back::after{
-  content: "";
-  position: absolute;
-  top: 0;
-
-  /* MUST match the SVG width below */
-  width: 2200px;
-  height: 100%;
-
-  background-repeat: no-repeat;
-  background-position: 0 50%;
-  background-size: 2200px 100%;
-
-  will-change: transform;
-}
-
-/* place the 2nd copy right after the 1st */
-.ribbon-front::before,
-.ribbon-back::before{ left: 0; }
-.ribbon-front::after,
-.ribbon-back::after{ left: 2200px; }
-
-/* FRONT: stronger, faster */
-.ribbon-front::before,
-.ribbon-front::after{
-  opacity: 0.85;
-  animation: ribbon-marquee-front 26s linear infinite;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='2200' height='260' viewBox='0 0 2200 260'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' x2='1'%3E%3Cstop offset='0' stop-color='%23ffb000'/%3E%3Cstop offset='0.18' stop-color='%23ff4d8d'/%3E%3Cstop offset='0.45' stop-color='%237a4dff'/%3E%3Cstop offset='0.70' stop-color='%2300b7c7'/%3E%3Cstop offset='1' stop-color='%2390e8b0'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cg fill='none' stroke='url(%23g)' stroke-linecap='round'%3E%3Cg opacity='0.20' stroke-width='1.2'%3E%3Cpath d='M-140 198 C 180 50 520 280 820 198 C 1120 60 1440 270 1760 198 C 2020 140 2100 220 2340 198'/%3E%3Cpath d='M-140 70 C 180 220 520 -10 820 70 C 1120 210 1440 0 1760 70 C 2020 130 2100 40 2340 70'/%3E%3C/g%3E%3Cg opacity='0.55' stroke-width='1.5'%3E%3Cpath d='M-140 182 C 180 70 520 260 820 182 C 1120 80 1440 250 1760 182 C 2020 140 2100 210 2340 182'/%3E%3Cpath d='M-140 176 C 180 76 520 254 820 176 C 1120 86 1440 244 1760 176 C 2020 140 2100 204 2340 176'/%3E%3Cpath d='M-140 170 C 180 82 520 248 820 170 C 1120 92 1440 238 1760 170 C 2020 140 2100 198 2340 170'/%3E%3Cpath d='M-140 164 C 180 88 520 242 820 164 C 1120 98 1440 232 1760 164 C 2020 140 2100 192 2340 164'/%3E%3Cpath d='M-140 158 C 180 94 520 236 820 158 C 1120 104 1440 226 1760 158 C 2020 140 2100 186 2340 158'/%3E%3Cpath d='M-140 152 C 180 100 520 230 820 152 C 1120 110 1440 220 1760 152 C 2020 140 2100 180 2340 152'/%3E%3Cpath d='M-140 146 C 180 106 520 224 820 146 C 1120 116 1440 214 1760 146 C 2020 140 2100 174 2340 146'/%3E%3Cpath d='M-140 140 C 180 112 520 218 820 140 C 1120 122 1440 208 1760 140 C 2020 140 2100 168 2340 140'/%3E%3Cpath d='M-140 134 C 180 118 520 212 820 134 C 1120 128 1440 202 1760 134 C 2020 140 2100 162 2340 134'/%3E%3Cpath d='M-140 128 C 180 124 520 206 820 128 C 1120 134 1440 196 1760 128 C 2020 140 2100 156 2340 128'/%3E%3Cpath d='M-140 122 C 180 130 520 200 820 122 C 1120 140 1440 190 1760 122 C 2020 140 2100 150 2340 122'/%3E%3Cpath d='M-140 116 C 180 136 520 194 820 116 C 1120 146 1440 184 1760 116 C 2020 140 2100 144 2340 116'/%3E%3Cpath d='M-140 110 C 180 142 520 188 820 110 C 1120 152 1440 178 1760 110 C 2020 140 2100 138 2340 110'/%3E%3Cpath d='M-140 104 C 180 148 520 182 820 104 C 1120 158 1440 172 1760 104 C 2020 140 2100 132 2340 104'/%3E%3C/g%3E%3Cg opacity='0.80' stroke-width='1.9'%3E%3Cpath d='M-140 154 C 180 78 520 242 820 154 C 1120 90 1440 230 1760 154 C 2020 140 2100 186 2340 154'/%3E%3Cpath d='M-140 144 C 180 90 520 230 820 144 C 1120 102 1440 218 1760 144 C 2020 140 2100 174 2340 144'/%3E%3Cpath d='M-140 134 C 180 102 520 218 820 134 C 1120 114 1440 206 1760 134 C 2020 140 2100 162 2340 134'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-}
-
-/* BACK: softer, slower (but always running) */
-.ribbon-back::before,
-.ribbon-back::after{
   opacity: 0.35;
-  animation: ribbon-marquee-back 40s linear infinite;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='2200' height='260' viewBox='0 0 2200 260'%3E%3Cdefs%3E%3ClinearGradient id='g2' x1='0' x2='1'%3E%3Cstop offset='0' stop-color='%23ffb000'/%3E%3Cstop offset='0.18' stop-color='%23ff4d8d'/%3E%3Cstop offset='0.45' stop-color='%237a4dff'/%3E%3Cstop offset='0.70' stop-color='%2300b7c7'/%3E%3Cstop offset='1' stop-color='%2390e8b0'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cg fill='none' stroke='url(%23g2)' stroke-linecap='round'%3E%3Cg opacity='0.55' stroke-width='1.2'%3E%3Cpath d='M-140 176 C 180 252 520 32 820 176 C 1120 252 1440 32 1760 176 C 2020 150 2100 210 2340 176'/%3E%3Cpath d='M-140 170 C 180 246 520 38 820 170 C 1120 246 1440 38 1760 170 C 2020 150 2100 204 2340 170'/%3E%3Cpath d='M-140 164 C 180 240 520 44 820 164 C 1120 240 1440 44 1760 164 C 2020 150 2100 198 2340 164'/%3E%3Cpath d='M-140 158 C 180 234 520 50 820 158 C 1120 234 1440 50 1760 158 C 2020 150 2100 192 2340 158'/%3E%3Cpath d='M-140 152 C 180 228 520 56 820 152 C 1120 228 1440 56 1760 152 C 2020 150 2100 186 2340 152'/%3E%3Cpath d='M-140 146 C 180 222 520 62 820 146 C 1120 222 1440 62 1760 146 C 2020 150 2100 180 2340 146'/%3E%3Cpath d='M-140 140 C 180 216 520 68 820 140 C 1120 216 1440 68 1760 140 C 2020 150 2100 174 2340 140'/%3E%3Cpath d='M-140 134 C 180 210 520 74 820 134 C 1120 210 1440 74 1760 134 C 2020 150 2100 168 2340 134'/%3E%3Cpath d='M-140 128 C 180 204 520 80 820 128 C 1120 204 1440 80 1760 128 C 2020 150 2100 162 2340 128'/%3E%3Cpath d='M-140 122 C 180 198 520 86 820 122 C 1120 198 1440 86 1760 122 C 2020 150 2100 156 2340 122'/%3E%3Cpath d='M-140 116 C 180 192 520 92 820 116 C 1120 192 1440 92 1760 116 C 2020 150 2100 150 2340 116'/%3E%3Cpath d='M-140 110 C 180 186 520 98 820 110 C 1120 186 1440 98 1760 110 C 2020 150 2100 144 2340 110'/%3E%3C/g%3E%3Cg opacity='0.20' stroke-width='1.1'%3E%3Cpath d='M-140 196 C 180 260 520 10 820 196 C 1120 260 1440 10 1760 196 C 2020 160 2100 230 2340 196'/%3E%3Cpath d='M-140 90 C 180 170 520 120 820 90 C 1120 170 1440 120 1760 90 C 2020 130 2100 70 2340 90'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+
+  background-repeat: repeat-x;
+  background-position: 0 50%;
+  background-size: 3000px 100%;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='2200' height='260' viewBox='0 0 2200 260'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' x2='1'%3E%3Cstop offset='0' stop-color='%23ffb000'/%3E%3Cstop offset='0.18' stop-color='%23ff4d8d'/%3E%3Cstop offset='0.45' stop-color='%237a4dff'/%3E%3Cstop offset='0.70' stop-color='%2300b7c7'/%3E%3Cstop offset='1' stop-color='%2390e8b0'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cg fill='none' stroke='url(%23g)' stroke-linecap='round'%3E%3Cg opacity='0.20' stroke-width='1.2'%3E%3Cpath d='M-140 198 C 180 50 520 280 820 198 C 1120 60 1440 270 1760 198 C 2020 140 2100 220 2340 198'/%3E%3Cpath d='M-140 70 C 180 220 520 -10 820 70 C 1120 210 1440 0 1760 70 C 2020 130 2100 40 2340 70'/%3E%3C/g%3E%3Cg opacity='0.55' stroke-width='1.5'%3E%3Cpath d='M-140 182 C 180 70 520 260 820 182 C 1120 80 1440 250 1760 182 C 2020 140 2100 210 2340 182'/%3E%3Cpath d='M-140 176 C 180 76 520 254 820 176 C 1120 86 1440 244 1760 176 C 2020 140 2100 204 2340 176'/%3E%3Cpath d='M-140 170 C 180 82 520 248 820 170 C 1120 92 1440 238 1760 170 C 2020 140 2100 198 2340 170'/%3E%3Cpath d='M-140 164 C 180 88 520 242 820 164 C 1120 98 1440 232 1760 164 C 2020 140 2100 192 2340 164'/%3E%3Cpath d='M-140 158 C 180 94 520 236 820 158 C 1120 104 1440 226 1760 158 C 2020 140 2100 186 2340 158'/%3E%3Cpath d='M-140 152 C 180 100 520 230 820 152 C 1120 110 1440 220 1760 152 C 2020 140 2100 180 2340 152'/%3E%3Cpath d='M-140 146 C 180 106 520 224 820 146 C 1120 116 1440 214 1760 146 C 2020 140 2100 174 2340 146'/%3E%3Cpath d='M-140 140 C 180 112 520 218 820 140 C 1120 122 1440 208 1760 140 C 2020 140 2100 168 2340 140'/%3E%3Cpath d='M-140 134 C 180 118 520 212 820 134 C 1120 128 1440 202 1760 134 C 2020 140 2100 162 2340 134'/%3E%3Cpath d='M-140 128 C 180 124 520 206 820 128 C 1120 134 1440 196 1760 128 C 2020 140 2100 156 2340 128'/%3E%3Cpath d='M-140 122 C 180 130 520 200 820 122 C 1120 140 1440 190 1760 122 C 2020 140 2100 150 2340 122'/%3E%3Cpath d='M-140 116 C 180 136 520 194 820 116 C 1120 146 1440 184 1760 116 C 2020 140 2100 144 2340 116'/%3E%3Cpath d='M-140 110 C 180 142 520 188 820 110 C 1120 152 1440 178 1760 110 C 2020 140 2100 138 2340 110'/%3E%3Cpath d='M-140 104 C 180 148 520 182 820 104 C 1120 158 1440 172 1760 104 C 2020 140 2100 132 2340 104'/%3E%3C/g%3E%3Cg opacity='0.80' stroke-width='1.9'%3E%3Cpath d='M-140 154 C 180 78 520 242 820 154 C 1120 90 1440 230 1760 154 C 2020 140 2100 186 2340 154'/%3E%3Cpath d='M-140 144 C 180 90 520 230 820 144 C 1120 102 1440 218 1760 144 C 2020 140 2100 174 2340 144'/%3E%3Cpath d='M-140 134 C 180 102 520 218 820 134 C 1120 114 1440 206 1760 134 C 2020 140 2100 162 2340 134'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+
+  animation: ribbonMoveBack 30s linear infinite;
 }
 
-/* Move exactly one SVG width; seamless because we have 2 copies */
-@keyframes ribbon-marquee-front{
-  from { transform: translateX(0); }
-  to   { transform: translateX(-2200px); }
+/* FRONT LAYER */
+.ribbon-front{
+  position: absolute;
+  inset: 0;
+  opacity: 0.8;
+
+  background-repeat: repeat-x;
+  background-position: 0 50%;
+  background-size: 3000px 100%;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='2200' height='260' viewBox='0 0 2200 260'%3E%3Cdefs%3E%3ClinearGradient id='g2' x1='0' x2='1'%3E%3Cstop offset='0' stop-color='%23ffb000'/%3E%3Cstop offset='0.18' stop-color='%23ff4d8d'/%3E%3Cstop offset='0.45' stop-color='%237a4dff'/%3E%3Cstop offset='0.70' stop-color='%2300b7c7'/%3E%3Cstop offset='1' stop-color='%2390e8b0'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cg fill='none' stroke='url(%23g2)' stroke-linecap='round'%3E%3Cg opacity='0.55' stroke-width='1.2'%3E%3Cpath d='M-140 176 C 180 252 520 32 820 176 C 1120 252 1440 32 1760 176 C 2020 150 2100 210 2340 176'/%3E%3Cpath d='M-140 170 C 180 246 520 38 820 170 C 1120 246 1440 38 1760 170 C 2020 150 2100 204 2340 170'/%3E%3Cpath d='M-140 164 C 180 240 520 44 820 164 C 1120 240 1440 44 1760 164 C 2020 150 2100 198 2340 164'/%3E%3Cpath d='M-140 158 C 180 234 520 50 820 158 C 1120 234 1440 50 1760 158 C 2020 150 2100 192 2340 158'/%3E%3Cpath d='M-140 152 C 180 228 520 56 820 152 C 1120 228 1440 56 1760 152 C 2020 150 2100 186 2340 152'/%3E%3Cpath d='M-140 146 C 180 222 520 62 820 146 C 1120 222 1440 62 1760 146 C 2020 150 2100 180 2340 146'/%3E%3Cpath d='M-140 140 C 180 216 520 68 820 140 C 1120 216 1440 68 1760 140 C 2020 150 2100 174 2340 140'/%3E%3Cpath d='M-140 134 C 180 210 520 74 820 134 C 1120 210 1440 74 1760 134 C 2020 150 2100 168 2340 134'/%3E%3Cpath d='M-140 128 C 180 204 520 80 820 128 C 1120 204 1440 80 1760 128 C 2020 150 2100 162 2340 128'/%3E%3Cpath d='M-140 122 C 180 198 520 86 820 122 C 1120 198 1440 86 1760 122 C 2020 150 2100 156 2340 122'/%3E%3Cpath d='M-140 116 C 180 192 520 92 820 116 C 1120 192 1440 92 1760 116 C 2020 150 2100 150 2340 116'/%3E%3Cpath d='M-140 110 C 180 186 520 98 820 110 C 1120 186 1440 98 1760 110 C 2020 150 2100 144 2340 110'/%3E%3C/g%3E%3Cg opacity='0.20' stroke-width='1.1'%3E%3Cpath d='M-140 196 C 180 260 520 10 820 196 C 1120 260 1440 10 1760 196 C 2020 160 2100 230 2340 196'/%3E%3Cpath d='M-140 90 C 180 170 520 120 820 90 C 1120 170 1440 120 1760 90 C 2020 130 2100 70 2340 90'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+
+  animation: ribbonMoveFront 24s linear infinite;
 }
-@keyframes ribbon-marquee-back{
-  from { transform: translateX(0); }
-  to   { transform: translateX(-2200px); }
+
+/* Animation distance MUST equal tile width */
+@keyframes ribbonMoveFront{
+  from { background-position: 0 50%; }
+  to   { background-position: -3000px 50%; }
+}
+
+@keyframes ribbonMoveBack{
+  from { background-position: 0 50%; }
+  to   { background-position: -3000px 50%; }
 }
 
 @media (prefers-reduced-motion: reduce){
-  .ribbon-front::before, .ribbon-front::after,
-  .ribbon-back::before, .ribbon-back::after{
+  .ribbon-front,
+  .ribbon-back{
     animation: none;
   }
 }
