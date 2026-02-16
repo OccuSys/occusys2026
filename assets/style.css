@@ -20,7 +20,7 @@
 
   /* header (lighter charcoal glass) */
   --header-bg: rgba(55, 60, 70, 0.86);
-  --header-text: rgba(255,255,255,0.92);
+  --header-text: rgba(255,255,255,1.0);
   --header-muted: rgba(255,255,255,0.72);
   --header-border: rgba(255,255,255,0.12);
 
@@ -139,7 +139,7 @@ body{
   box-shadow: 0 18px 60px rgba(15,23,42,0.14);
 
   /* room for ribbon background */
-  padding: 26px 26px 150px;
+  padding: 26px 26px 120px;
 }
 
 /* content always above ribbon */
