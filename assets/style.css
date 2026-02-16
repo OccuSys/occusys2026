@@ -297,7 +297,8 @@ h1{
   background-image: url("/assets/ribbon.svg");
   background-repeat: repeat-x; /* ✅ makes it feel full on desktop */
   background-position: 50% 50%;/* ✅ prevents “cropped corner” look */
-  background-size: clamp(900px, 90vw, 1400px) 100%;
+  background-size: clamp(1000px, 85vw, 1600px) auto;
+
   /*            ^ smaller = denser lines (less “thin”) */
 
   opacity: 0.9;
