@@ -384,12 +384,12 @@ body{
 hr{
   border: 0;
   border-top: 1px solid rgba(15,23,42,0.10);
-  margin: 34px 0;
+  margin: 24px 0;
 }
 
 /* Headings hierarchy */
 h2{
-  margin-top: 34px;
+  margin-top: 24px;
   margin-bottom: 14px;
   font-size: 28px;
   letter-spacing: -0.4px;
@@ -397,7 +397,7 @@ h2{
 }
 
 h3{
-  margin-top: 26px;
+  margin-top: 24px;
   margin-bottom: 10px;
   font-size: 20px;
   letter-spacing: -0.2px;
