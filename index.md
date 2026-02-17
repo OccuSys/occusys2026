@@ -26,8 +26,6 @@ permalink: /
   </div>
 </section>
 ---
-<section class="location-strip"></section>
----
 
 ## About the Workshop {#about}
 
