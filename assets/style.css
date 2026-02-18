@@ -22,7 +22,7 @@
   /* header (lighter charcoal glass) */
   --header-bg: #1e293b;
   /* --header-bg: rgba(30, 41, 59, 0.94);   /* deeper slate, less see-through */
-  --header-bg: rgba(55, 60, 70, 0.86); */
+  /* --header-bg: rgba(55, 60, 70, 0.86); */
   --header-text: rgba(255,255,255,1.0);
   --header-muted: rgba(255,255,255,0.78);
   --header-border: rgba(255,255,255,0.10);
