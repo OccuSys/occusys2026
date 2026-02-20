@@ -90,9 +90,9 @@ The workshop agenda and speaker lineup will be posted here after notifications.
 ## Organizing Committee {#organization}
 
 - Prof. Zoltan Nagy (TU Eindhoven)  
-- Prof. Michael Kane (Northeastern University)  
+- Prof. Michael Kane (Northeastern University)    
+- Dr. Martin Mosteiro Romero (TU Delft)
 - Maharshi Pathak (Northeastern University)  
-- Dr. Martin Mosteiro Romero (TU Delft)  
 - Dr. Wei Luo (TU Eindhoven)  
 - Ava Mohammadi (TU Eindhoven)
 - Mahnaz Vahdat (Northeastern University)  
