@@ -66,7 +66,8 @@ We invite original research, position papers, and work-in-progress submissions o
 
 Submissions must be unpublished and not under review for any other venue. Papers must be at most 4 pages (single-spaced, US Letter 8.5” × 11”), including figures, tables, and appendices. The format must follow the official <a href="https://www.acm.org/publications/proceedings-template" target="_blank" rel="noopener">ACM proceedings template (sigconf format)</a> (LaTeX preferred or Word) and comply with ACM formatting requirements (9-pt font). Authors must anonymize their manuscripts by enabling the `anonymous` option and using the `anonsuppress` section where appropriate. Papers that do not comply with size, formatting, or anonymization requirements will not be reviewed.
 
-All papers must be in Portable Document Format (PDF) and submitted via 
+All papers must be in Portable Document Format (PDF) and submitted via
+
 <a href="https://occusys26.hotcrp.com/" target="_blank" rel="noopener">
   occusys26.hotcrp.com
 </a>.
